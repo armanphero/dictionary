@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="dictionary.css">
+</head>
+
+<body>
+
+    <header class="container">
+        <h1 class="text-center text-info">Dictionary</h1>
+    </header>
+    <!-- nav -->
+    <nav class="my-4">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid justify-content-center">
+
+                    <!-- search any word -->
+                    <div class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                            id="search-input">
+                        <button class="btn btn-outline-success" type="submit" onclick="searchedWord()">Search</button>
+                    </div>
+                    <!-- filter by language -->
+
+                </div>
+            </nav>
+        </div>
+    </nav>
+
+    <!-- dictionary section -->
+
+    <section id="dictionary-section" class="container d-none">
+        <div class="card width-25">
+            <div class="card-body">
+                <div id="titiel-div">
+                    <div>
+                        <h2 id="main-word">hello</h2>
+                        <h5 class="purple" id="phonetic">hə'ləʊ</h5>
+                    </div>
+                    <div id="audio-container">
+                    </div>
+                </div>
+                <!-- noun -->
+                <div id="noun-div">
+                    <h4>noun</h4><hr>
+                </div>
+                <div id="noun-details">
+                    <p>Meaning</p>
+                    <ul id="noun-meanings">
+                    </ul><br>
+                    <p>Synonyms: <span id="noun-synonyms"></span></span></p>
+                </div>
+                <!-- verb -->
+                <div id="verb-div">
+                    <h4>verb</h4><hr>
+                </div>
+                <div id="verb-details">
+                    <p>Meaning</p>
+                    <ul id="verb-definitions">
+                    </ul><br>
+                    <p>Synonyms: <span id="verb-synonyms"></span></span></p>
+                </div>
+                <!-- source -->
+                <p>source : <a href="#" id="source" target="_blank"></a></p>
+            </div>
+        </div>
+    </section>
+    <!-- throw error -->
+    <section class="container">
+        <div class="error d-none" id="throw-error">didn't find any word</div>
+    </section>
+    <footer class="text-center text-secondary">
+        <p>created by Arman</p>
+    </footer>
+    <!-- script -->
+
+    <script src="dictionary.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
